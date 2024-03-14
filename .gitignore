@@ -162,7 +162,7 @@ cython_debug/
 # add_list myself
 hidden_*
 *.onnx
-
+.Trash*
 
 
 # ============= React ==============
