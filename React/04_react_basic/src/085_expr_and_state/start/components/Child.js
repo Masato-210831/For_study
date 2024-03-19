@@ -6,9 +6,12 @@
 import "./Child.css";
 
 const Child = () => {
+  const fn = () => 'hello';
+  const a = fn();
   return (
     <div className="component">
       <h3>式と文</h3>
+      {true ? 'hello' : 'bye'}
     </div>
   );
 };

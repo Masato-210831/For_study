@@ -12,6 +12,8 @@ const Example = () => {
   );
 };
 
+console.log(Example())
+
 console.log(Example());
 
 export default Example;
