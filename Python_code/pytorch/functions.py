@@ -9,8 +9,8 @@ from IPython.display import display
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torchinfo import summary
-from torchviz import make_dot
+# from torchinfo import summary
+# from torchviz import make_dot
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
