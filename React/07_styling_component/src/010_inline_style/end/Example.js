@@ -10,7 +10,7 @@ import { useState } from "react";
 const Example = () => {
   const [isSelected, setIsSelected] = useState(false);
 
-  const clickHandler = () => setIsSelected(prev => !prev);
+  const clickHandler = () => setIsSelected((prev) => !prev);
 
   /* POINT インラインスタイルのメリットとデメリット
   メリット
@@ -24,7 +24,7 @@ const Example = () => {
   /* POINT style属性に適応させるスタイルをオブジェクトで記述します */
   const style = {
     margin: "auto",
-    "border-radius": "9999px",
+    borderRadius: "9999px",
     border: "none",
     display: "block",
 
@@ -40,13 +40,14 @@ const Example = () => {
     /* POINT 直接記述することによって可読性が大きく低下するので、可読性が向上する方法を考えて実装してみよう */
   };
 
-
   return (
     <>
       <button style={style} onClick={clickHandler}>
         ボタン
       </button>
-      <div style={{ textAlign: "center" }}>{isSelected && "クリックされました。"}</div>
+      <div style={{ textAlign: "center" }}>
+        {isSelected && "クリックされました。"}
+      </div>
     </>
   );
 };

@@ -1,16 +1,18 @@
 import { useState } from "react";
 
 import SubButton from "./components/SubButton";
-import "./Example.css";
+import styles from "./Example.module.css";
 
 const Example = () => {
   const [isSelected, setIsSelected] = useState(false);
 
   const clickHandler = () => setIsSelected((prev) => !prev);
 
+  console.log(styles)
+
   return (
     <>
-      <button className={`btn ${isSelected ? "selected" : ""}`} onClick={clickHandler}>
+      <button className={`${styles.btn} ${isSelected ? styles.selected : ""}`} onClick={clickHandler}>
         ボタン
       </button>
       <SubButton />
