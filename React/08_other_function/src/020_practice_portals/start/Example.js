@@ -1,6 +1,13 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
+
 import Toast from "./components/Toast";
 
+
+const ModalPortal = ({children}) => {
+  const parent = document.querySelector('.container,start')
+  return createPortal(children, parent)
+}
 const Example = () => {
   const [toastOpen, setToastOpen] = useState(false);
 
@@ -21,11 +28,14 @@ const Example = () => {
         トーストを表示する
       </button>
       {toastOpen && (
+        <ModalPortal>
           <Toast
             visible={toastOpen}
             handleCloseClick={() => setToastOpen(false)}
           />
+        </ModalPortal>
       )}
+      
     </div>
   );
 };

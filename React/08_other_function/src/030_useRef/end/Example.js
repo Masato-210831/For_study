@@ -34,7 +34,7 @@ const Case2 = () => {
     <div>
       <h3>ユースケース2</h3>
       <video style={{ maxWidth: "100%" }} ref={videoRef}>
-        <source src="./sample.mp4"></source>
+        <source src="./sample.mp4" />
       </video>
       <button
         onClick={() => {
