@@ -18,6 +18,8 @@ class Trainer:
 
     def fit(self, x, t, max_epoch=10, batch_size=32, max_grad=None, eval_interval=20):
         data_size = len(x)
+        print('x_shape:', x.shape)
+        print('data_size', data_size)
         max_iters = data_size // batch_size
         self.eval_interval = eval_interval
         model, optimizer = self.model, self.optimizer
