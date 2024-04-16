@@ -14,6 +14,7 @@ const CounterProvider = ({ children }) => {
             throw new Error('不明なactionです。')
         }
       }, 0);
+      
     return (
         <CounterContext.Provider value={state}>
             <CounterDispatchContext.Provider value={dispatch}>
