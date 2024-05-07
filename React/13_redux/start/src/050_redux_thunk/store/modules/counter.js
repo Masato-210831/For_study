@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { asyncCount } from "../../api/counter"
+
 
 const counter = createSlice({
   name: 'counter',
@@ -23,5 +25,12 @@ const counter = createSlice({
 
 const { add, minus } = counter.actions;
 
-export { add, minus }
+const addAsync = (payload) => {
+  return async(dispatch, getState) => {
+    const response = await asyncCount(payload);
+    dispatch(add(response.data))
+  }
+} 
+
+export { add, minus, addAsync }
 export default counter.reducer
