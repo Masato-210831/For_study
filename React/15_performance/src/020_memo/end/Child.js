@@ -1,6 +1,8 @@
 import { memo } from "react";
 
 function areEqual(prevProps, nextProps) {
+  console.log(prevProps)
+  console.log(nextProps)
   if(prevProps.countB !== nextProps.countB) {
     return false; // 再レンダリング
   } else {
