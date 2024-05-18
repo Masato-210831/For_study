@@ -6,7 +6,6 @@ import ArticleList from '@/components/articleList';
 
 export default async function SSR() {
 
-
   const articles = await fetch(ENDPOINT, {next:{revalidate:10}}).then(res => res.json());
   return (
   <>

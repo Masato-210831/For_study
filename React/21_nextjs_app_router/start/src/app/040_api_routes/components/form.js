@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 export default function ArticleForm() {
-  const [newId, setNewId] = useState();
-  const [newTitle, setNewTitle] = useState();
-  const [msg, setMsg] = useState()
+  const [newId, setNewId] = useState("");
+  const [newTitle, setNewTitle] = useState("");
+  const [msg, setMsg] = useState("")
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -12,7 +12,9 @@ export default function ArticleForm() {
     
     fetch('/api/article', { method: form.method, body: formData }).then((res) => {
       if(!res.ok) {
-        return 'エラーが発生しました。'
+        return res.json().then(data => {
+          return data.msg
+        })
       } 
       return res.json().then(data => {
         return `${data.id}:${data.title}の登録が完了しました。`
