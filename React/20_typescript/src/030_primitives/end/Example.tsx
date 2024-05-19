@@ -10,8 +10,8 @@ const Example = () => {
   let num: number = 102;
   console.log(num);
   
-  let bignum: bigint = 103n;
-  console.log(bignum);
+  // let bignum: bigint = 103;
+  // console.log(bignum);
 
   let bool: boolean = true;
   console.log(bool);
