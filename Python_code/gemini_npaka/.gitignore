@@ -1,0 +1,5 @@
+.env*
+*/.DS_Store
+.tool-versions
+*/data
+*/storage
